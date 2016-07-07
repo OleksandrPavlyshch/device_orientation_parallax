@@ -1,0 +1,5 @@
+/source/bower
+/node_modules
+/build
+source/fonts/svgfont**
+source/sass/_svgfont**

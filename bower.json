@@ -1,0 +1,19 @@
+{
+  "name": "it-challenge_warmup_round",
+  "description": "it-challenge_warmup_round",
+  "main": "index.js",
+  "authors": [],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
