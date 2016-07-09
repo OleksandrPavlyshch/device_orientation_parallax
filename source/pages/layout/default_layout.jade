@@ -1,6 +1,6 @@
-mixin insert-image(name, alt)
+mixin insert-image(name, alt, className)
 	-alt = alt || 'image'
-	img(alt="#{alt}" src="img/#{name}")
+	img(alt="#{alt}" src="img/#{name}" class='#{className}' || '')
 
 
 doctype html
