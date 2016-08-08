@@ -1,0 +1,14 @@
+
+//- mixin insert-image(name, alt, className)
+//- 	-alt = alt || 'image'
+//- 	img(alt="#{alt}" src="img/#{name}" class='#{className}' || '')
+
+mixin slide(data)
+	.slide
+		.slide_inner
+			.slide_image
+				+insert-image(data.image, data.image_alt)
+			.slide_description
+				.slide_description-name=data.name
+				.slide_description-title=data.title
+

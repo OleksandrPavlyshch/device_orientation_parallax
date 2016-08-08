@@ -1,3 +1,23 @@
 {
 	"title": "Device orientation parallax"
+	, "slider": [
+		{
+			"image": "picture1.jpg"
+			, "image_alt": "picture1"
+			, "name": ""
+			, "title": ""
+		}
+		, {
+			"image": "picture2.jpg"
+			, "image_alt": "picture2"
+			, "name": ""
+			, "title": ""
+		}
+		, {
+			"image": "picture3.jpg"
+			, "image_alt": "picture3"
+			, "name": ""
+			, "title": ""
+		}
+	]
 }
