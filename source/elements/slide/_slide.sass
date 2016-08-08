@@ -6,20 +6,21 @@
 	height: 100%
 	float: left
 	overflow: hidden
+	perspective: 100vw
+	transform-style: preserve-3d
 	&_inner
-		transform-style: preserve-3d
 		position: relative
-		perspective: 100vw
+		transform-style: preserve-3d
 	&_image
 		text-align: center
 		position: relative
 		z-index: 1
-		transform: translateZ(20px)
+		transform: translateZ(10px)
 		img
 			vertical-align: middle
 			width: auto !important
 			max-width: 100% !important
-			max-height: 100%
+			max-height: 120%
 			display: inline-block !important
 	&_description
 		position: absolute
@@ -31,7 +32,7 @@
 		z-index: 10
 		width: 85%
 		height: 80%
-		transform: translateZ(40px)
+		transform: translateZ(120px)
 		border: 5px solid $half-and-half
 		color: $half-and-half
 		padding: 2%
