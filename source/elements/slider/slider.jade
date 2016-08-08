@@ -1,4 +1,6 @@
 include ../slide/slide
 
-section#slider.slider
+section#slider.slider.owl-carousel
+	each val, index in slider
+		+slide(slider[index])
 

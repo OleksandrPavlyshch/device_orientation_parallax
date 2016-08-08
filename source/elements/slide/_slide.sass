@@ -1,0 +1,42 @@
+.owl-item
+	height: 100vh
+
+.slide
+	width: 100%
+	height: 100%
+	float: left
+	overflow: hidden
+	&_inner
+		transform-style: preserve-3d
+		position: relative
+		perspective: 100vw
+	&_image
+		text-align: center
+		position: relative
+		z-index: 1
+		transform: translateZ(20px)
+		img
+			vertical-align: middle
+			width: auto !important
+			max-width: 100% !important
+			max-height: 100%
+			display: inline-block !important
+	&_description
+		position: absolute
+		top: 5%
+		right: 0
+		bottom: 0
+		left: 0
+		margin: 0 auto
+		z-index: 10
+		width: 85%
+		height: 80%
+		transform: translateZ(40px)
+		border: 5px solid $half-and-half
+		color: $half-and-half
+		padding: 2%
+		&-name
+			font-size: 2vw
+		&-title
+			font-size: 1vw
+

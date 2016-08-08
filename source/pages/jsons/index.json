@@ -2,22 +2,22 @@
 	"title": "Device orientation parallax"
 	, "slider": [
 		{
-			"image": "picture1.jpg"
+			"image": "picture1.png"
 			, "image_alt": "picture1"
-			, "name": ""
-			, "title": ""
+			, "name": "Watch one"
+			, "title": "Watch model 1"
 		}
 		, {
-			"image": "picture2.jpg"
+			"image": "picture2.png"
 			, "image_alt": "picture2"
-			, "name": ""
-			, "title": ""
+			, "name": "Watch two"
+			, "title": "Watch model 2"
 		}
 		, {
-			"image": "picture3.jpg"
+			"image": "picture3.png"
 			, "image_alt": "picture3"
-			, "name": ""
-			, "title": ""
+			, "name": "Watch three"
+			, "title": "Watch model 3"
 		}
 	]
 }
