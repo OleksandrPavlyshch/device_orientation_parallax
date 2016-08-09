@@ -11,17 +11,30 @@
 	&_inner
 		position: relative
 		transform-style: preserve-3d
+		+max-screen($tablet)
+			height: 100%
 	&_image
 		text-align: center
 		position: relative
 		z-index: 1
 		transform: translateZ(10px)
+		+max-screen($tablet)
+			height: 100%
 		img
 			vertical-align: middle
 			width: auto !important
 			max-width: 100% !important
 			max-height: 120%
 			display: inline-block !important
+			+max-screen($tablet)
+				max-width: 80% !important
+				max-height: 80% !important
+				position: absolute
+				left: 0
+				top: 0
+				bottom: 0
+				right: 0
+				margin: auto
 	&_description
 		position: absolute
 		top: 5%
@@ -36,8 +49,26 @@
 		border: 5px solid $half-and-half
 		color: $half-and-half
 		padding: 2%
+		+max-screen($tablet)
+			transform: translateZ(50px)
+			top: 8%
+			width: 81%
+			height: 83%
+		+max-screen($mobile)
+			top: 14%
+			width: 74%
+			height: 71%
+			border-width: 2px
 		&-name
 			font-size: 2vw
+			+max-screen($tablet)
+				font-size: 4vw
+			+max-screen($mobile)
+				font-size: 5vw
 		&-title
 			font-size: 1vw
+			+max-screen($tablet)
+				font-size: 2vw
+			+max-screen($mobile)
+				font-size: 3vw
 
