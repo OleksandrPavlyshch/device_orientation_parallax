@@ -19,11 +19,10 @@ $(document).ready(function(){
 			new mouseMoveParralax({
 				container: slides[i]
 				, element: slidesInner[i]
-				, braking: 10
+				// , braking: 11
 				, isRotate: true
 				, isOposite: true
 			});
-
 
 		}
 	}
