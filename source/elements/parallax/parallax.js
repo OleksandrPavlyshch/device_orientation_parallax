@@ -37,7 +37,7 @@ var mouseMoveParralax = function (userParams) {
 		window.addEventListener('deviceorientation', function(event) {
 			params.element.style.webkitTransform =
 			params.element.style.transform =
-			'rotateX(' + Math.round((event.beta * -1) / 2) + 'deg) ' +
+			'rotateX(' + Math.round((event.beta * -1) / 3) + 'deg) ' +
 			'rotateY(' + Math.round(event.gamma * -1 / 2) + 'deg) ';
 			angeleX.innerHTML = "X: " + Math.round((event.beta * -1) / 2) + '<br>and original' + Math.round(event.beta);
 			angeleY.innerHTML = "Y: " + Math.round(event.gamma * -1 / 2) + '<br>and original' + Math.round(event.gamma);
