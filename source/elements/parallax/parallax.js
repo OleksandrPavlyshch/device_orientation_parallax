@@ -20,7 +20,7 @@ var mouseMoveParralax = function (userParams) {
 		, translateScale: 1 // scale element for translate
 		, isOposite: false // for mouse oposite move
 		, isRotate: false // for 3D rotate
-		, eventTreegerTimeInterval: 25
+		, eventTreegerTimeInterval: 25 //element apdate interval
 	};
 
 	var thisFunc = this;
