@@ -1,54 +1,4 @@
 'use strict';
-// var count = 1;
-// var lastCall = 0;
-// function throttle(func, interval) {
-// 	// var lastCall = 0;
-// 	return function() {
-// 		var now = Date.now();
-// 		if (lastCall + interval < now) {
-// 			lastCall = now;
-// 			count++;
-// 			return func.apply(this, arguments);
-// 		}
-// 	};
-// }
-
-// Function.prototype.limitExecByInterval = function(time) {
-// 	var lock, execOnUnlock, args, fn = this;
-// 	return function() {
-// 		args = arguments;
-// 		if (!lock) {
-// 			fn.apply(this, args);
-// 			lock = true;
-// 			var scope = this;
-// 			setTimeout(function(){
-// 				lock = false;
-// 				if (execOnUnlock) {
-// 					args.callee.apply(scope, args);
-// 					execOnUnlock = false;
-// 				}
-// 			}, time);
-// 		} else execOnUnlock = true;
-// 	};
-// };
-
-// window.onload = function() {
-// 	var handler = function() {
-// 		for (var i=0; i<1000; i++) {
-// 			document.getElementById('indicator').innerHTML = this.value.length;
-// 		}
-// 	};
-// 	document.getElementById('limit').onchange = function() {
-// 		document.getElementById('message').onkeyup = this.checked ? 
-// 			handler.limitExecByInterval(70) : handler;
-// 	}
-// 	document.getElementById('limit').onchange();
-
-// }
-
-
-var angeleX = document.getElementById('angeles_x')
-	, angeleY = document.getElementById('angeles_y');
 
 window.mobileAndTabletcheck = function() {
 	var check = false;
@@ -70,34 +20,24 @@ var mouseMoveParralax = function (userParams) {
 		, translateScale: 1 // scale element for translate
 		, isOposite: false // for mouse oposite move
 		, isRotate: false // for 3D rotate
-		, eventTreegerTimeInterval: 50
+		, eventTreegerTimeInterval: 25
 	};
-
-	// var eventTimeInterval;
-
 
 	var thisFunc = this;
 
 	var params = thisFunc.extendParams(defaultParams, userParams);
 
-	// eventTimeInterval = setInterval(function(){
 
-
-	// }, params.eventTreegerTimeInterval);
 
 	//init scale
 	params.element.style.transform = 'scale(' + params.translateScale +')';
 	params.element.style['-webkit-transform'] = 'scale(' + params.translateScale +')';
 
-	var count = 1;
 	var mobileHendler = function (event) {
-		// count++;
 		params.element.style.webkitTransform =
 		params.element.style.transform =
 		'rotateX(' + Math.round(((event.beta - 45) * -1) / 3) + 'deg) ' +
 		'rotateY(' + Math.round(event.gamma / 5) + 'deg) ';
-		// angeleX.innerHTML = "X: " + Math.round(((event.beta - 45) * -1) / 3) + '<br>and original' + Math.round(event.beta);
-		// angeleY.innerHTML = "Y: " + Math.round(event.gamma / 5) + '<br>and original' + Math.round(event.gamma) + ' count ' + count;
 	};
 
 	var lastMove = 0;
@@ -106,35 +46,20 @@ var mouseMoveParralax = function (userParams) {
 		window.addEventListener('deviceorientation', function(event) {
 
 			if(Date.now() - lastMove > params.eventTreegerTimeInterval) {
-				angeleY.innerHTML =  ' count ' + count;
-				// count++;
 				mobileHendler(event);
 				lastMove = Date.now();
 			} 
-
-
-			// throttle(mobileHendler(event), params.eventTreegerTimeInterval);
-
-			// mobileHendler(event).limitExecByInterval(params.eventTreegerTimeInterval);
-			// params.element.style.webkitTransform =
-			// params.element.style.transform =
-			// 'rotateX(' + Math.round(((event.beta - 45) * -1) / 3) + 'deg) ' +
-			// 'rotateY(' + Math.round(event.gamma / 5) + 'deg) ';
-			// angeleX.innerHTML = "X: " + Math.round(((event.beta - 45) * -1) / 3) + '<br>and original' + Math.round(event.beta);
-			// angeleY.innerHTML = "Y: " + Math.round(event.gamma / 5) + '<br>and original' + Math.round(event.gamma) + ' count ' + count;
 
 		});
 
 		return;
 	}
-var d = 1;
+	
 	params.container.addEventListener('mousemove', function (event) {
 		if(Date.now() - lastMove > params.eventTreegerTimeInterval) {
-			angeleY.innerHTML =  ' count ' + d;
-			d++;
 			lastMove = Date.now();
 
-		var translateValue = thisFunc.calculatePositionValue(event, params);
+			var translateValue = thisFunc.calculatePositionValue(event, params);
 
 			params.element.style.transform = translateValue;
 			params.element.style['-webkit-transform'] = translateValue;

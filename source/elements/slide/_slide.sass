@@ -11,7 +11,6 @@
 	&_inner
 		position: relative
 		transform-style: preserve-3d
-		// transition: transform .1s ease
 		+max-screen($tablet)
 			height: 100%
 	&_image
@@ -21,15 +20,18 @@
 		transform: translateZ(10px)
 		+max-screen($tablet)
 			height: 100%
+			transform: translateZ(-10px)
 		img
 			vertical-align: middle
 			width: auto !important
 			max-width: 100% !important
 			max-height: 120%
 			display: inline-block !important
+			+max-screen($mdpi)
+				max-width: 55% !important
 			+max-screen($tablet)
-				max-width: 80% !important
-				max-height: 80% !important
+				max-width: 70% !important
+				max-height: 75% !important
 				position: absolute
 				left: 0
 				top: 0
@@ -38,38 +40,38 @@
 				margin: auto
 	&_description
 		position: absolute
-		top: 5%
+		top: 11%
 		right: 0
 		bottom: 0
 		left: 0
 		margin: 0 auto
 		z-index: 10
-		width: 85%
-		height: 80%
+		width: 75%
+		height: 73%
 		transform: translateZ(120px)
 		border: 5px solid $half-and-half
 		color: $half-and-half
 		padding: 2%
 		+max-screen($tablet)
 			transform: translateZ(80px)
-			top: 8%
-			width: 81%
-			height: 83%
-		+max-screen($mobile)
 			top: 14%
-			width: 74%
-			height: 71%
+			width: 72%
+			height: 75%
+		+max-screen($mobile)
+			top: 18%
+			width: 58%
+			height: 62%
 			border-width: 2px
 		&-name
 			font-size: 2vw
 			+max-screen($tablet)
-				font-size: 4vw
+				font-size: 3.5vw
 			+max-screen($mobile)
 				font-size: 5vw
 		&-title
 			font-size: 1vw
 			+max-screen($tablet)
-				font-size: 2vw
+				font-size: 1.8vw
 			+max-screen($mobile)
 				font-size: 3vw
 
