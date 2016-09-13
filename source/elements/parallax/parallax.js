@@ -9,7 +9,6 @@ window.mobileAndTabletcheck = function() {
 	return check;
 };
 
-
 var mouseMoveParralax = function (userParams) {
 
 	var defaultParams = {
@@ -20,13 +19,12 @@ var mouseMoveParralax = function (userParams) {
 		, translateScale: 1 // scale element for translate
 		, isOposite: false // for mouse oposite move
 		, isRotate: false // for 3D rotate
-		, eventTreegerTimeInterval: 70 //element apdate interval
+		, eventTreegerTimeInterval: 70 //element update interval
 	};
 
 	var thisFunc = this;
 
 	var params = thisFunc.extendParams(defaultParams, userParams);
-
 
 
 	//init scale
